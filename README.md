@@ -88,16 +88,6 @@ pip install -r requirements.txt
 cd streamlit_app
 streamlit run 00_🛈_Info.py
 ```
-The app will be available at: **http://localhost:8501**
-
----
-
-## 🎬 Demo
-
-![Crypto Predictor](assets/gifs/crypto.gif)
-
-▶️ **Watch the YouTube Tutorial**
-[Crypto Predictor App in 3 Minutes with Streamlit](#)
 
 ---
 
@@ -124,7 +114,7 @@ The app will be available at: **http://localhost:8501**
 ## 🤝 Contributions & Support
 
 - Found a bug? Open a pull request on GitHub.
-- For inquiries, email: **maninastre@gmail.com**
+- For inquiries, email: **emailtoayushsingh@gmail.com**
 
 ---
 
