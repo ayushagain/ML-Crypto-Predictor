@@ -7,116 +7,132 @@ st.set_page_config(page_title="Crypto Predictor", page_icon="🪙")
 current_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 st.markdown(
-    """# 🪙 **CryptoPredictor**
-### **Predicting Cryptocurrency Prices with ML**
+    # CryptoPredictor
 
-**CryptoPredictor is a machine learning-powered app designed to forecast cryptocurrency prices. Built with Python and Streamlit, it utilises historical data to predict trends for popular cryptocurrencies, empowering users with data-driven insights.**
+## Predicting Cryptocurrency Prices with ML
 
-## 🛠️ **How It's Built**
+CryptoPredictor is a machine learning-powered app that forecasts cryptocurrency prices. Built with Python and Streamlit, it leverages historical data to predict trends for popular cryptocurrencies, providing users with data-driven insights.
 
-CryptoPredictor is built with the following core frameworks and tools:
+---
 
-- **Streamlit** - To create an intuitive web interface.
-- **Yahoo Finance API (YFinance)** - To fetch up-to-date cryptocurrency data.
-- **CoinGecko API** - To dynamically fetch the top 2,500 cryptocurrencies by market capitalisation from a pool of 17,061 available tokens, ensuring access to real-time data for popular selections. For an updated list of the 2,500 tickers based on market capitalisation, users can run the Jupyter Notebook available at: [CoinGeckoToCsv.ipynb](https://github.com/josericodata/CryptoPredictor/blob/main/assets/dataCleaning/CoinGeckoToCsv.ipynb).
-- **LSTM (Long Short-Term Memory)** - A neural network model optimised for time-series predictions.
-- **Plotly** - To generate dynamic and interactive financial charts.
-- **Pandas** - To manipulate and process cryptocurrency datasets.
+## 🏗️ Project Structure
 
-## 🧑‍💻 **How It Works**
-
-1. The user selects a cryptocurrency (e.g., BTC, ETH).
-2. Historical price data is retrieved using the Yahoo Finance API.
-3. The LSTM model is trained on the past 60 days of historical data.
-4. Predictions are generated for the next 1–90 days.
-5. Results are displayed with interactive charts and tables.
-
-## ✨ **Key Features**
-
-- **Real-time cryptocurrency data** - Access accurate and up-to-date information.
-- **Interactive charts** - View historical trends and future predictions visually.
-- **Custom prediction ranges** - Forecast prices for 1 to 90 days.
-- **Downloadable CSV** - Save prediction results for further analysis.
-- **User-friendly interface** - Accessible for novice and experienced users alike.
-
-## 🚀 **Getting Started**
-
-### **Local Installation**
-
-1. Clone the repository:
-```bash
-git clone https://github.com/user/CryptoPredictor.git
 ```
-**Hint:** Replace `user` with `josericodata` in the URL above. I am deliberately asking you to pause here so you can support my work. If you appreciate it, please consider giving the repository a star or forking it. Your support means a lot—thank you! 😊
+CryptoPredictor  
+├── assets/         
+│   ├── dataCleaning/
+│   │   ├── CoinGeckoToCsv.ipynb   
+│   │   └── cryptoTickers.csv
+│   └── gifs/               
+│       └── crypto.gif
+├── streamlit_app/
+│   ├── modules/
+│   │   └── helper.py
+│   ├── pages/               
+│   │   └── 01_₿__CryptoPredictor.py
+│   └── 00_🛈_Info.py        
+├── LICENSE                 
+├── README.md               
+└── requirements.txt        
+```
 
-2. Navigate to the repository directory:
+---
+
+## 🛠️ Built With
+
+- **Streamlit** - Interactive UI for easy usability.
+- **Yahoo Finance API (YFinance)** - Fetches up-to-date cryptocurrency data.
+- **CoinGecko API** - Retrieves top 2,500 cryptocurrencies by market capitalization.
+- **LSTM (Long Short-Term Memory)** - Optimized for time-series predictions.
+- **Plotly** - Creates interactive financial charts.
+- **Pandas** - Handles cryptocurrency dataset processing.
+
+---
+
+## 🚀 How It Works
+
+1. Select a cryptocurrency (e.g., BTC, ETH).
+2. Retrieve historical price data via Yahoo Finance API.
+3. Train an LSTM model on the past 60 days of data.
+4. Generate predictions for 1–90 days.
+5. View results with interactive charts and tables.
+
+---
+
+## ✨ Features
+
+- 📊 **Real-time cryptocurrency data** - Always up-to-date.
+- 📈 **Interactive charts** - Visualize trends and predictions.
+- ⏳ **Custom prediction ranges** - Forecast for 1 to 90 days.
+- 📥 **Downloadable CSV** - Export results for further analysis.
+- 🖥️ **User-friendly interface** - Accessible to all experience levels.
+
+---
+
+## 🔧 Installation Guide
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/josericodata/CryptoPredictor.git
+```
+
+### 2️⃣ Navigate to Project Directory
 ```bash
 cd CryptoPredictor
 ```
 
-3. Create a virtual environment:
+### 3️⃣ Create and Activate Virtual Environment
 ```bash
 python3 -m venv venvCrypto
-```
-
-4. Activate the virtual environment:
-```bash
 source venvCrypto/bin/activate
 ```
 
-5. Install requirements:
+### 4️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Navigate to the app directory:
+### 5️⃣ Run the Application
 ```bash
 cd streamlit_app
-```
-
-7. Run the app:
-```bash
 streamlit run 00_🛈_Info.py
 ```
 
-The app will be live at ```http://localhost:8501```
+---
 
+## 🔮 Future Enhancements
 
+- 📈 **Advanced ML models (e.g., Prophet) for improved accuracy.**
+- 🌍 **Support for more cryptocurrencies.**
+- 📊 **Volatility analysis to assess risks.**
+- 🔐 **User accounts for personalized predictions.**
 
-## 🌟 Future Enhancements
-
-Planned improvements and new features include:
-
-- **Integration of advanced ML models** (e.g., Prophet) for better prediction accuracy.
-- **Support for additional cryptocurrencies** to expand coverage.
-- **Volatility analysis** to measure price swings and potential risks.
-- **User accounts and history tracking** for tailored predictions and personalised experiences.
-
-
-## 🔧 Environment Setup
-
-The CryptoPredictor app is built and tested using the following software environment:
-
-- **Operating System**: Ubuntu 22.04.5 LTS (Jammy)
-- **Python Version**: Python 3.10.12
-
-Ensure your environment matches or exceeds these versions for optimal performance.
-
+---
 
 ## 📋 Important Notes
 
-- **CoinGecko API Error 429**: If too many requests are made to the URL, the API may block further requests. Please restart or close the app, and try again after a minute or two. The data should then be available..
-- **Using the Crypto Predictor**:
-    1. Select a cryptocurrency from the dropdown menu.
-    2. Choose the desired prediction range using the slider.
-    3. Adjust the **Epochs** slider to set the number of training iterations. Note: Higher epochs result in longer training times but can improve model accuracy.
-    4. Click the **Run Prediction** button to generate results.
+- **CoinGecko API Error 429:** If you make too many requests, the API may temporarily block access. Restart the app after a few minutes.
+- **Using CryptoPredictor:**
+  - Choose a cryptocurrency.
+  - Select the prediction range.
+  - Adjust epochs (higher values may improve accuracy but take longer to train).
+  - Click **Run Prediction** to see results.
 
+---
+
+## 🤝 Contributions & Support
+
+- Found a bug? Open a pull request on GitHub.
+- For inquiries, email: **emailtoayushsingh@gmail.com**
+
+---
 
 ## ⚠️ Disclaimer
 
-This app is designed to demonstrate my skills in data modeling and analytics, showcasing how data-driven insights can assist in building my portfolio as a data analyst. It is not intended to provide financial advice or investment guidance. The predictions are for illustrative purposes only and should not be relied upon for making financial decisions.
-"""
+CryptoPredictor is a demonstration of machine learning in financial forecasting. It is not financial advice. Predictions are for educational purposes only and should not be relied upon for investment decisions.
+
+Happy Learning - Ayush
+
 )
 
 # Display the timestamp in a Streamlit app
