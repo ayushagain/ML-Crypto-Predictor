@@ -9,7 +9,7 @@ CryptoPredictor is a machine learning-powered app that forecasts cryptocurrency 
 ## 🏗️ Project Structure
 
 ```
-CryptoPredictor  
+ML-Crypto-Predictor  
 ├── assets/         
 │   ├── dataCleaning/
 │   │   ├── CoinGeckoToCsv.ipynb   
@@ -57,37 +57,6 @@ CryptoPredictor
 - ⏳ **Custom prediction ranges** - Forecast for 1 to 90 days.
 - 📥 **Downloadable CSV** - Export results for further analysis.
 - 🖥️ **User-friendly interface** - Accessible to all experience levels.
-
----
-
-## 🔧 Installation Guide
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/josericodata/CryptoPredictor.git
-```
-
-### 2️⃣ Navigate to Project Directory
-```bash
-cd CryptoPredictor
-```
-
-### 3️⃣ Create and Activate Virtual Environment
-```bash
-python3 -m venv venvCrypto
-source venvCrypto/bin/activate
-```
-
-### 4️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 5️⃣ Run the Application
-```bash
-cd streamlit_app
-streamlit run 00_🛈_Info.py
-```
 
 ---
 
