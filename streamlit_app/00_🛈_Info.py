@@ -39,42 +39,6 @@ CryptoForecast is powered by:
 - **Downloadable reports** - Save predictions for future reference.
 - **Beginner-friendly UI** - Simple and easy-to-use interface for all users.
 
-## 🚀 **Getting Started**
-
-### **Local Installation**
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ayushagain/CryptoForecast.git
-```
-
-2. Navigate to the project folder:
-```bash
-cd CryptoForecast
-```
-
-3. Create and activate a virtual environment:
-```bash
-python3 -m venv venvCrypto
-source venvCrypto/bin/activate
-```
-
-4. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-5. Navigate to the app folder:
-```bash
-cd streamlit_app
-```
-
-6. Launch the app:
-```bash
-streamlit run main.py
-```
-
-The application will be accessible at ```http://localhost:8501```.
 
 ## 🌟 Future Enhancements
 
